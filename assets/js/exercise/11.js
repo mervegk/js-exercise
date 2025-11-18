@@ -227,3 +227,6 @@ for (let i = 1; i <= 30; i++) {
   }
   console.log(i);
 }
+const nsns = [1, 2, 3];
+console.log(nsns.length);
+

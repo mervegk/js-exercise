@@ -5,6 +5,7 @@ let score = JSON.parse(localStorage.getItem('score')) ||
   ties: 0
 };
 updateScoreElement();
+
 function pickComputerMove() {
   const randomNumber = Math.random();
   let computerMove = '';
@@ -21,6 +22,7 @@ function pickComputerMove() {
 const confirmationContainer = document.querySelector('.confirm-message-container');
 const confirmYes = document.querySelector('.confirmation-yes');
 const confirmNo = document.querySelector('.confirmation-no');
+
 function resetScore() {
   score.wins = 0;
   score.loses = 0;

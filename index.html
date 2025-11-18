@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Javascript Amazon tutorial</title>
+
+  <style>
+    .mt {
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,9 +18,91 @@
     alert('Good Job');
     ">Hello</button>
 
+  <div id="stars" class="mt"></div>
+  <div id="substract" class="mt"></div>
+  <div id="sum" class="mt"></div>
+
   <script>
 
+    function isPrime(num) {
+      if (num <= 1) {
+        return false;
+      }
+
+      if (num === 2) {
+        return true;
+      }
+
+      if (num % 2 === 0) {
+        return false;
+      }
+
+      for (let i = 3; i <= Math.sqrt(num); i += 2) {
+        if (num % i === 0) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function primesUpTo(number) {
+      const primes = [];
+
+      for (let i = 2; i <= number; i++) {
+        if (isPrime(i)) {
+          primes.push(i);
+        }
+      }
+
+      return primes;
+    }
+
+    console.log(isPrime(43));
+    console.log(primesUpTo(45))
+
+    /* const numbers = [175, 50, 25];
+       let substract = numbers.reduce((total, num) => total - num);
+      document.getElementById("substract").innerHTML = substract; 
+ 
+     let total = numbers[0];
+     for (let i = 1; i < numbers.length; i++) {
+       total -= numbers[i];
+     }
+     console.log('Total: ', total);
+ 
+     document.getElementById("sum").innerHTML = numbers.reduce((total, num) => total + num) */
+
+    /*  let starPyramids = document.getElementById('stars');
+      let starCount = ''
+  
+      for (let i = 1; i < 6; i++) {
+        for (let j = 1; j <= i; j++) {
+          starCount += `*`
+        }
+        starCount += `<br>`
+          switch (i) {
+           case 1:
+             starCount += `* <br>`
+             break;
+           case 2:
+             starCount += '** <br>'
+             break;
+           case 3:
+             starCount += '*** <br>'
+             break;
+           case 4:
+             starCount += '**** <br>'
+             break;
+           case 5:
+             starCount += '*****'
+             break;
+         } 
+      }
+  
+      starPyramids.innerHTML = starCount; */
+
   </script>
+
 </body>
 
 </html>
