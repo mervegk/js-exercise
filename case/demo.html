@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="font-inter bg-black h-screen w-screen site-bg relative -z-10  text-white">
+  <div class="overlay w-full h-full"></div>
+  <nav class="p-4 mx-auto flex justify-between items-center absolute top-0 left-0 w-full">
+    <div>
+      <h4 class="text-3xl">LOGO</h4>
+    </div>
+    <div class="block md:hidden">
+      <button class="" onclick="toggleMobileMenu()"><span
+          class="material-symbols-outlined text-3xl">menu</span></button>
+      <div id="mobile-menu" class="hidden absolute w-full h-screen top-0 left-0 z-10 bg-black flex-col p-4">
+        <button onclick="toggleMobileMenu()" class="text-end"><span class="material-symbols-outlined text-3xl">close
+          </span></button>
+        <ul class="flex flex-col justify-center gap-4 uppercase text-lg mt-8 text-start px-4">
+          <li class="flex flex-col gap-0.5">Home <span class="text-sm">Get Ready</span></li>
+          <li class="flex flex-col gap-0.5">About Us <span class="text-sm">Who Are We</span></li>
+          <li class="flex flex-col gap-0.5">Portfolio <span class="text-sm">Our Work</span></li>
+          <li class="flex flex-col gap-0.5">Contact <span class="text-sm">Get In Touch</span></li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="hidden md:block">
+      <ul class="flex gap-4 uppercase text-xl text-center">
+        <li class="flex flex-col gap-0.5">Home <span class="text-sm">Get Ready</span></li>
+        <li class="flex flex-col gap-0.5">About Us <span class="text-sm">Who Are We</span></li>
+        <li class="flex flex-col gap-0.5">Portfolio <span class="text-sm">Our Work</span></li>
+        <li class="flex flex-col gap-0.5">Contact <span class="text-sm">Get In Touch</span></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container h-full flex flex-col items-center justify-center mx-auto">
+    <section>
+      <section class="flex justify-center items-center gap-4">
+        <div class="w-1/5">
+          <img src="./line.png" alt="">
+        </div>
+        <div>
+          <h4 class="text-2xl">THE</h4>
+        </div>
+      </section>
+      <section class="my-4 text-center">
+        <h1 class="text-red-500 text-3xl font-lora font-semibold">DESIGN</h1>
+      </section>
+      <section class="flex justify-center items-center gap-4">
+        <div>
+          <h4 class="text-2xl">CENTER</h4>
+        </div>
+        <div class="w-1/5">
+          <img src="./line.png" alt="">
+        </div>
+      </section>
+    </section>
+  </main>
+  <footer class="absolute bottom-0 p-2 lg:p-4 mx-auto flex max-lg:flex-col max-lg:gap-2
+     justify-between items-center w-full">
+    <section>
+      <div class="flex items-center gap-2 justify-center">
+        <div id="days" class="countdown lg:text-lg "></div>
+        <div id="hours" class="countdown"></div>:
+        <div id="minutes" class="countdown"></div>:
+        <div id="seconds" class="countdown"></div>
+      </div>
+    </section>
+    <section>
+      <form action="">
+        <input type="text" id="email" placeholder="Enter your e-mail"
+          class="bg-transparent placeholder:text-gray-400 font-lora border border-gray-400 max-md:p-1 p-2 rounded-lg max-md:text-sm">
+        <button
+          class="text-black bg-white rounded-lg text-center max-md:p-1 max-md:px-2 p-2 font-semibold max-md:text-sm">SUBSCRIBE</button>
+      </form>
+    </section>
+  </footer>
+  <script src="./tailwind-config.js"></script>
+  <script src="./countdown.js"></script>
+  <script src="./toggle-menu.js"></script>
+</body>
+
+</html>

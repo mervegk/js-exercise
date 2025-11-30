@@ -1,0 +1,24 @@
+.site-bg {
+  background: url('./pexels-photo-378570.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
+  background-color: black;
+  opacity: 0.4;
+}
+
+.countdown {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 8px;
+  font-weight: 700;
+  text-align: center;
+}
